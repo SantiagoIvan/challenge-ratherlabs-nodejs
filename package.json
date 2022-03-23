@@ -1,0 +1,23 @@
+{
+  "name": "challenge-node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^3.2.3",
+    "cookie-parser": "~1.4.4",
+    "crc-32": "^1.2.1",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "node-binance-api": "^0.13.1",
+    "nodemon": "^2.0.15",
+    "orderbooks": "^1.0.4",
+    "ws": "^8.5.0"
+  }
+}
