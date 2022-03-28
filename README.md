@@ -8,7 +8,7 @@
 
 - /book/:pair/priceOrder?size=<size>&operationType=<operationType>
 
-Con :pair in ["btcusdt", "ethusdt"] && operationType in ["sell", "buy"] && size ∈  R {\displaystyle \mathbb {R} } \mathbb{R}
+Con :pair in ["btcusdt", "ethusdt"] && operationType in ["sell", "buy"] && size ∈  R 
 
 ### Atencion
 
