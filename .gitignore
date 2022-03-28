@@ -2,3 +2,4 @@ node_modules
 .env
 marketDataSource/bitfinex.js
 *.log
+package-lock.json
