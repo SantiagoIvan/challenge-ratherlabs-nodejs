@@ -5,18 +5,17 @@ var { connectBinance } = require('./marketDataSource/binance')
 var { connectBitFinex } = require('./marketDataSource/bitfinex')
 
 var indexRouter = require('./routes/index');
-var marketRouter = require('./routes/market')
+var marketRouter = require('./routes/book')
 
 var app = express();
-// connectBinance()
-connectBitFinex()
+connectBinance()
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/', indexRouter);
-app.use('/market', marketRouter)
+app.use('/book', marketRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
