@@ -37,10 +37,10 @@ Line: 39, 53
 ###  /book/BTCUSDT/priceOrder?size=2&operationType=buy
   ![imagen](https://user-images.githubusercontent.com/48731203/160451418-85cc053e-84a5-48e5-90a0-2927ec4f1764.png)
 
-###  /book/ETHUSDT/priceOrder?size=1.5&operationType=buy
+###  /book/ETHUSDT/priceOrder?size=1.5&operationType=sell
   ![imagen](https://user-images.githubusercontent.com/48731203/160451624-df9e4f36-0681-42a0-941d-6762bfcb59a1.png)
 
-###  /book/ETHUSDT/priceOrder?size=1.5&operationType=sell
+###  /book/ETHUSDT/priceOrder?size=1.5&operationType=buy
   ![imagen](https://user-images.githubusercontent.com/48731203/160451578-4985cda6-8b3a-4938-9f91-8087beb98a2b.png)
 
   
