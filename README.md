@@ -25,7 +25,7 @@ Line: 39, 53
 
 ###  /book/BTCUSDT/tips
 
-  [imagen](https://user-images.githubusercontent.com/48731203/160450072-02e08747-204d-48ac-befc-319c62ee6e1c.png)
+  ![imagen](https://user-images.githubusercontent.com/48731203/160450072-02e08747-204d-48ac-befc-319c62ee6e1c.png)
 
 ###  /book/ETHUSDT/tips
   
