@@ -2,7 +2,6 @@ var createError = require('http-errors');
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var { connectBinance } = require('./marketDataSource/binance')
-var { connectBitFinex } = require('./marketDataSource/bitfinex')
 
 var indexRouter = require('./routes/index');
 var marketRouter = require('./routes/book')
