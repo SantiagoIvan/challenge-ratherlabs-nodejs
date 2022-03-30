@@ -16,10 +16,14 @@ const handleGetTips = (req, res) => {
 }
 
 const handleGetPriceOrder = (req, res) => {
+    if (!req.query) {
+        res.status(404).send("Invalid query")
+        return
+    }
     let { operationType, size } = req.query
     let { pair } = req.params
-    pair = decodeURIComponent(pair).toUpperCase()
-    operationType = decodeURIComponent(operationType).toLowerCase()
+    pair = decodeURIComponent(pair)?.toUpperCase()
+    operationType = decodeURIComponent(operationType)?.toLowerCase()
     size = parseFloat(decodeURIComponent(size))
 
     fs.appendFileSync(logfile, `[PRICE_ORDER] Pair: ${pair} - OperationType: ${operationType} - Size: ${size}\n`)
