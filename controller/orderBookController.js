@@ -12,23 +12,23 @@ const handleGetTips = (req, res) => {
 
     const result = { "bestBid": book.getBestBid(), "bestAsk": book.getBestAsk() }
     fs.appendFileSync(logfile, `[GET_TIPS] ${pair}: ${JSON.stringify(result)} \n`)
-    res.json(result)
+    res.json({data : result})
 }
 
 const handleGetPriceOrder = (req, res) => {
     if (!req.query) {
-        res.status(404).send("Invalid query")
+        res.status(400).send("Invalid query")
         return
     }
-    let { operationType, size } = req.query
+    let { operationtype, size } = req.query
     let { pair } = req.params
     pair = decodeURIComponent(pair)?.toUpperCase()
-    operationType = decodeURIComponent(operationType)?.toLowerCase()
+    let operationType = decodeURIComponent(operationtype)?.toLowerCase()
     size = parseFloat(decodeURIComponent(size))
 
     fs.appendFileSync(logfile, `[PRICE_ORDER] Pair: ${pair} - OperationType: ${operationType} - Size: ${size}\n`)
     if (!symbols.includes(pair) || !opTypes.includes(operationType) || !size) {
-        res.status(404).send('Invalid query')
+        res.status(400).send('Invalid query')
         return
     }
 
@@ -67,7 +67,7 @@ const handleGetPriceOrder = (req, res) => {
         }
     }
     totalPrice = totalPrice.toFixed(3)
-    res.json({ pair, operationType, size, totalPrice })
+    res.json({ data: {pair, operationType, size, totalPrice }})
 }
 
 module.exports = {
